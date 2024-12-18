@@ -78,7 +78,11 @@ body {
     }          
     .header h1 {         
         font-size: 1.5rem;     
-    } 
+    }
+    .wrapper {
+        display: block;
+        margin-left: 120px;
+      }
 } 
 /* เพิ่มใน styles.css */ 
 .overlay {     
@@ -107,3 +111,106 @@ body {
 .gallery-item:nth-child(2) { animation-delay: 0.2s; } 
 .gallery-item:nth-child(3) { animation-delay: 0.3s; } 
 /* และอื่นๆ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: white;
+}
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu a:hover {
+    background-color: #ffffff;
+}
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+@media (min-width: 768px) {
+    .hamburger {
+    display: none;
+    }
+    .menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    gap: 20px;
+    }
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed; /* ทำให้ตำแหน่งอยู่คงที่บนหน้าจอ */
+    top: 20px; /* ระยะห่างจากด้านบนของหน้าจอ */
+    right: 20px; /* ระยะห่างจากด้านขวาของหน้าจอ */
+}
+
+.wrapper .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.wrapper.active .bar.top {
+    transform: rotate(45deg);
+    top: 10px;
+    position: relative;
+}
+
+.wrapper.active .bar.middle {
+    opacity: 0;
+}
+
+.wrapper.active .bar.bottom {
+    transform: rotate(-45deg);
+    top: -10px;
+    position: relative;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed; /* แก้ไขจาก absolute เป็น fixed */
+    top: 60px;
+    right: 20px; /* แก้ไขตำแหน่งให้อยู่ชิดขวา */
+    width: 200px; /* กำหนดความกว้างของเมนู */
+    background-color: #a1a1a1;
+    padding: 10px 0;
+    z-index: 1000; /* ให้ลำดับการแสดงผลสูงกว่าองค์ประกอบอื่น */
+    border-radius: 5px; /* เพิ่มความโค้งให้เมนู */
+    box-shadow: 0px 4px 8px rgba(117, 117, 117, 0.2); /* เพิ่มเงาเพื่อความสวยงาม */
+}
+
+.menu.show {
+    display: flex;
+}
+

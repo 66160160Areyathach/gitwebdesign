@@ -26,3 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });     
     }); 
 }); 
+function toggleMenu() {
+    const wrapper = document.querySelector('.wrapper');
+    const menu = document.querySelector('.menu');
+    wrapper.classList.toggle('active');
+    menu.classList.toggle('show');
+}
