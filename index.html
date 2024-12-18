@@ -1,0 +1,102 @@
+<!-- gallery.html --> 
+<!DOCTYPE html> 
+<html lang="th"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>แกลเลอรี่รูปภาพ</title>     
+    <link rel="stylesheet" href="css/gallery.css"> 
+</head> 
+<body>     
+    <header class="header">         
+        <h1>5 สถานท่ีเที่ยวสุดฟิน ในระยอง</h1>         
+        <nav class="filters">             
+            <button class="filter-btn active" data-filter="all">ทั้งหมด</button>             
+            <button class="filter-btn" data-filter="1">สวนพฤกษศาสตร์ระยอง</button>             
+            <button class="filter-btn" data-filter="2">เกาะเสม็ด</button>             
+            <button class="filter-btn" data-filter="3">สวนละไม</button>
+            <button class="filter-btn" data-filter="4">ทุ่งโปรงทอง</button>
+            <button class="filter-btn" data-filter="5">ทะเลแหวก</button>
+            <div class="wrapper" onclick="toggleMenu()">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+            <div class="menu">
+                <a href="index.html" style="color: black">Home</a>
+                <a href="contact.html" style="color: black">Contact</a>
+                <a href="1.html" style="color: black">สวนพฤกษศาสตร์</a>
+                <a href="2.html" style="color: black">เกาะเสม็ด</a>
+                <a href="3.html" style="color: black">สวนละไม</a>
+                <a href="4.html" style="color: black">ทุ่งโปรงทอง</a>
+                <a href="5.html" style="color: black">ทะเลแหวก</a>
+            </div>            
+        </nav>     
+    </header>      
+    <main class="gallery">         
+        <!-- เพิ่มใน index.html -->      
+        <div class="gallery-item 1">
+            <a href="1.html"> <!-- ลิงก์ไปยังหน้าใหม่ -->
+                <img
+                    src="https://roijang.com/wp-content/uploads/2023/12/shutterstock_1853331793.jpg"
+                    alt="สวนพฤกษศาสตร์ระยอง"
+                />
+                <div class="overlay">
+                    <h3>สวนพฤกษศาสตร์ระยอง</h3>
+                    <p>สวนพฤกษศาสตร์ในเมืองใหญ่</p>
+                </div>
+            </a>
+        </div>        
+        <div class="gallery-item 2">
+            <a href="2.html"> <!-- ลิงก์ไปยังหน้าใหม่ -->         
+            <img           
+            src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1645173023/blog/gjrff8xovmknfiz29ozj.jpg"           
+            alt="เกาะเสม็ด"         
+            />         
+            <div class="overlay">           
+                <h3>เกาะเสม็ด</h3>           
+                <p>วิถีชีวิตในเกาะเสม็ด</p>         
+            </div>
+            </a>       
+        </div>        
+        <div class="gallery-item 3">
+            <a href="3.html"> <!-- ลิงก์ไปยังหน้าใหม่ -->         
+            <img           
+            src="https://th.bing.com/th/id/R.679bb1a165144bfdb575802d14b0da46?rik=hX%2bYj%2frEq35QFQ&riu=http%3a%2f%2fwww.chillnaid.com%2fwp-content%2fuploads%2f2018%2f03%2f%e0%b8%aa%e0%b8%a7%e0%b8%99%e0%b8%a5%e0%b8%b0%e0%b9%84%e0%b8%a1-%e0%b8%a3%e0%b8%b0%e0%b8%a2%e0%b8%ad%e0%b8%87.jpg&ehk=0ZzhSXHpk0nRuTkJuQcFSafEnZq3CJdl%2bbR%2bIkYt4bs%3d&risl=&pid=ImgRaw&r=0"           
+            alt="สวนละไม"         
+            />         
+            <div class="overlay">           
+                <h3>สวนละไม</h3>           
+                <p>สวนละไมธรรมชาติ</p>         
+            </div>
+        </a>       
+        </div>        
+        <div class="gallery-item 4">
+            <a href="4.html"> <!-- ลิงก์ไปยังหน้าใหม่ -->         
+            <img           
+            src="https://cdn2.mushroomtravel.com/files/MUSH/Uploads/Attraction/202003/Tung%20Prong%20Thong%20or%20Golden%20Mangrove%20Field%2C%20Pra%20Sae%2C%20Rayong%20-%20Gettyimages%20(4).jpg"           
+            alt="ทุ่งโปรงทอง"         
+            />         
+            <div class="overlay">           
+                <h3>ทุ่งโปรงทอง</h3>           
+                <p>ทุ่งโปรงทองและชีวิต</p>         
+            </div>       
+        </a>
+        </div>         
+        <div class="gallery-item 5">
+            <a href="5.html"> <!-- ลิงก์ไปยังหน้าใหม่ -->         
+            <img           
+            src="https://th.bing.com/th/id/OIP.gcUhtomQxHaniJbKFmP8lQHaE8?rs=1&pid=ImgDetMain"           
+            alt="ทะเลแหวก"         
+            />         
+            <div class="overlay">           
+                <h3>ทะเลแหวก</h3>           
+                <p>ทะเลแหวกธรรมชาติ</p>         
+            </div>       
+        </a>
+        </div>
+        <!-- เพิ่มรูปภาพอื่นๆ ในลักษณะเดียวกัน -->     
+    </main>
+    <script src="js/script.js"></script> 
+    </body> 
+</html> 
